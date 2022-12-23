@@ -1,0 +1,17 @@
+{
+  "item.nylemod.mythril_ingot": "Mythril Ingot",
+  "item.nylemod.mythril_nugget": "Mythril Nugget",
+  "item.nylemod.raw_mythril": "Raw Mythril",
+  "item.nylemod.dowsing_rod": "Dowsing Rod",
+
+  "block.nylemod.mythril_block": "Mythril Block",
+  "block.nylemod.mythril_ore": "Mythril Ore",
+  "block.nylemod.raw_mythril_block": "Raw Mythril Block",
+  "block.nylemod.netherrack_mythril_ore": "Netherrack Mythril Ore",
+  "block.nylemod.deepslate_mythril_ore": "Deepslate Mythril Ore",
+  "block.nylemod.speedy_block": "Speedy Block",
+
+  "itemGroup.nylemod.mythril": "NyleMod Mythril Tab",
+
+  "item.nylemod.dowsing_rod.no_valuables": "No Valuables found"
+}

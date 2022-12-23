@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "nylemod:mythril_nugget"
+    }
+  },
+  "result": {
+    "item": "nylemod:mythril_ingot"
+  }
+}

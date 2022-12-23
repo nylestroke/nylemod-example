@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "nylemod:mythril_block",
+    "nylemod:mythril_ore",
+    "nylemod:deepslate_mythril_ore",
+    "nylemod:netherrack_mythril_ore",
+    "nylemod:raw_mythril_block"
+  ]
+}
