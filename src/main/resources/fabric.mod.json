@@ -8,12 +8,15 @@
     "nylestroke"
   ],
   "contact": {
-    "homepage": "https://github.com/nylestroke"
+    "homepage": "https://github.com/nylestroke/nylemod-example"
   },
   "license": "MIT",
   "icon": "assets/nylemod/icon.png",
   "environment": "*",
   "entrypoints": {
+    "client": [
+      "me.nylestroke.nylemod.client.NylemodClient"
+    ],
     "main": [
       "me.nylestroke.nylemod.NylemodExample"
     ]

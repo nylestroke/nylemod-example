@@ -4,6 +4,18 @@
   "item.nylemod.raw_mythril": "Raw Mythril",
   "item.nylemod.dowsing_rod": "Dowsing Rod",
   "item.nylemod.lilac_flower_bulb": "Lilac Flower Bulb",
+  "item.nylemod.grape": "Grape",
+  "item.nylemod.mythril_pickaxe": "Mythril Pickaxe",
+  "item.nylemod.mythril_axe": "Mythril Axe",
+  "item.nylemod.mythril_shovel": "Mythril Shovel",
+  "item.nylemod.mythril_hoe": "Mythril Hoe",
+  "item.nylemod.mythril_sword": "Mythril Sword",
+  "item.nylemod.magic_mythril_dust": "Magic Mythril Dust",
+
+  "item.nylemod.mythril_helmet": "Mythril Helmet",
+  "item.nylemod.mythril_chestplate": "Mythril Chestplate",
+  "item.nylemod.mythril_leggings": "Mythril Leggings",
+  "item.nylemod.mythril_boots": "Mythril Boots",
 
   "block.nylemod.mythril_block": "Mythril Block",
   "block.nylemod.mythril_ore": "Mythril Ore",
@@ -11,8 +23,25 @@
   "block.nylemod.netherrack_mythril_ore": "Netherrack Mythril Ore",
   "block.nylemod.deepslate_mythril_ore": "Deepslate Mythril Ore",
   "block.nylemod.speedy_block": "Speedy Block",
+  "block.nylemod.mythril_button": "Mythril Button",
+  "block.nylemod.mythril_pressure_plate": "Mythril Pressure Plate",
+  "block.nylemod.mythril_fence": "Mythril Fence",
+  "block.nylemod.mythril_wall": "Mythril Wall",
+  "block.nylemod.mythril_fence_gate": "Mythril Fence Gate",
+  "block.nylemod.vladik_door": "Vladik Door",
+  "block.nylemod.vladik_trapdoor": "Vladik Trapdoor",
+  "block.nylemod.mythril_slab": "Mythril Slab",
+  "block.nylemod.mythril_stairs": "Mythril Stairs",
+  "block.nylemod.lilac_flower": "Lilac Flower",
+  "block.nylemod.potted_lilac_flower": "Potted Lilac Flower",
 
-  "itemGroup.nylemod.mythril": "NyleMod Mythril Tab",
+  "itemGroup.nylemod.nylemod_tab": "NyleMod",
 
-  "item.nylemod.dowsing_rod.no_valuables": "No Valuables found"
+  "item.nylemod.dowsing_rod.no_valuables": "No Valuables found",
+
+  "item.nylemod.dowsing_rod.tooltip": "Press §eSHIFT§r for more Information",
+  "item.nylemod.dowsing_rod.tooltip.shift": "Right Click to find valuables",
+  "item.nylemod.speedy_block.tooltip": "Step on block to get §3SPEED§r effect",
+
+  "tooltip.nylemod.mythril_mod": "§dA Magical Block"
 }

@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
 
-    public static ItemGroup MYTHRIL = FabricItemGroupBuilder.build(new Identifier(NylemodExample.MOD_ID, "mythril"),
-            () -> new ItemStack(ModItems.MYTHRIL_INGOT));
+    public static ItemGroup NYLEMOD = FabricItemGroupBuilder.build(new Identifier(NylemodExample.MOD_ID, "nylemod_tab"),
+            () -> new ItemStack(ModItems.DOWSING_ROD));
 
 }

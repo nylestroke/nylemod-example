@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "nylemod:block/mythril_block",
+    "top": "nylemod:block/mythril_block",
+    "side": "nylemod:block/mythril_block"
+  }
+}

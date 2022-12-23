@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "nylemod:raw_mythril"
+    }
+  },
+  "result": {
+    "item": "nylemod:mythril_fence_gate",
+    "count": 2
+  }
+}
