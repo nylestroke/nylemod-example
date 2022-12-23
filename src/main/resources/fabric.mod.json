@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "nylemod",
+  "version": "${version}",
+  "name": "nylemod",
+  "description": "Example mod using Fabric 1.18.1",
+  "authors": [
+    "nylestroke"
+  ],
+  "contact": {
+    "homepage": "https://github.com/nylestroke"
+  },
+  "license": "MIT",
+  "icon": "assets/nylemod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.nylestroke.nylemod.NylemodExample"
+    ]
+  },
+  "mixins": [
+    "nylemod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.12",
+    "fabric": "*",
+    "minecraft": "1.18.1"
+  }
+}
