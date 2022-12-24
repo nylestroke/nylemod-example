@@ -18,6 +18,7 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -92,6 +93,7 @@ public class DowsingRodItem extends Item {
     }
 
     private boolean isValuableBlock(Block block) {
-        return ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS.contains(block);
+        return Registry.BLOCK.getOrCreateEntry(Registry.BLOCK.getKey(block).get())
+                .isIn(ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS);
     }
 }
