@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "nylemod:block/jacaranda_sapling"
+  }
+}

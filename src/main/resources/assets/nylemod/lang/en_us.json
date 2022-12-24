@@ -44,6 +44,13 @@
   "block.nylemod.mythril_lamp": "Mythril Lamp",
   "block.nylemod.winter_window": "Winter Window",
   "block.nylemod.grape_vine": "Grape Vine",
+  "block.nylemod.jacaranda_log": "Jacaranda Log",
+  "block.nylemod.jacaranda_wood": "Jacaranda Wood",
+  "block.nylemod.stripped_jacaranda_log": "Stripped Jacaranda Log",
+  "block.nylemod.stripped_jacaranda_wood": "Stripped Jacaranda Wood",
+  "block.nylemod.jacaranda_planks": "Jacaranda Planks",
+  "block.nylemod.jacaranda_leaves": "Jacaranda Leaves",
+  "block.nylemod.jacaranda_sapling": "Jacaranda Sapling",
 
   "itemGroup.nylemod.nylemod_tab": "NyleMod",
 

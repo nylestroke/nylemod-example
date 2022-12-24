@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "nylemod:jacaranda_log",
+    "nylemod:jacaranda_wood",
+    "nylemod:stripped_jacaranda_log",
+    "nylemod:stripped_jacaranda_wood"
+  ]
+}

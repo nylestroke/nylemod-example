@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nylemod:jacaranda_log"
+    }
+  ],
+  "result": {
+    "item": "nylemod:jacaranda_planks",
+    "count": 4
+  }
+}
