@@ -1,5 +1,8 @@
 package me.nylestroke.nylemod.item.custom;
 
+import me.nylestroke.nylemod.item.ModItems;
+import me.nylestroke.nylemod.sound.ModSounds;
+import me.nylestroke.nylemod.util.InventoryUtil;
 import me.nylestroke.nylemod.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.client.gui.screen.Screen;
@@ -8,6 +11,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -38,6 +43,14 @@ public class DowsingRodItem extends Item {
                 if (isValuableBlock(blockBelow)) {
                     outputValuableCoordinates(positionClicked.down(i), player, blockBelow);
                     foundBlock = true;
+
+                    if (InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET)) {
+                        addNbtToDataTable(player, positionClicked.add(0, -i, 0), blockBelow);
+                    }
+
+                    context.getWorld().playSound(player, positionClicked, ModSounds.DOWSING_ROD_FOUND_ORE,
+                            SoundCategory.BLOCKS, 1f, 1f);
+
                     break;
                 }
             }
@@ -51,6 +64,17 @@ public class DowsingRodItem extends Item {
                 (player -> player.sendToolBreakStatus(player.getActiveHand())));
 
         return super.useOnBlock(context);
+    }
+
+    private void addNbtToDataTable(PlayerEntity player, BlockPos pos, Block blockBelow) {
+        ItemStack dataTablet =
+                player.getInventory().getStack(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET));
+
+        NbtCompound nbtData = new NbtCompound();
+        nbtData.putString("nylemod.last_ore", "Found " + blockBelow.asItem().getName().getString() + " at (" +
+                pos.getX() + ", " + pos.getY() + ", " + pos.getZ() + ")");
+
+        dataTablet.setNbt(nbtData);
     }
 
     @Override

@@ -16,6 +16,13 @@
   "item.nylemod.mythril_chestplate": "Mythril Chestplate",
   "item.nylemod.mythril_leggings": "Mythril Leggings",
   "item.nylemod.mythril_boots": "Mythril Boots",
+  "item.nylemod.data_tablet": "Data Tablet",
+  "item.nylemod.grape_seeds": "Grape Seeds",
+  "item.nylemod.vladikbow": "Vladik Bow",
+  "item.nylemod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.nylemod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+  "item.nylemod.hard_bass_music_disc": "Hard Bass Music Disc",
+  "item.nylemod.hard_bass_music_disc.desc": "Hard Bass School - Raz-raz-raz, eto hardbass (YT)",
 
   "block.nylemod.mythril_block": "Mythril Block",
   "block.nylemod.mythril_ore": "Mythril Ore",
@@ -34,6 +41,9 @@
   "block.nylemod.mythril_stairs": "Mythril Stairs",
   "block.nylemod.lilac_flower": "Lilac Flower",
   "block.nylemod.potted_lilac_flower": "Potted Lilac Flower",
+  "block.nylemod.mythril_lamp": "Mythril Lamp",
+  "block.nylemod.winter_window": "Winter Window",
+  "block.nylemod.grape_vine": "Grape Vine",
 
   "itemGroup.nylemod.nylemod_tab": "NyleMod",
 
@@ -43,5 +53,12 @@
   "item.nylemod.dowsing_rod.tooltip.shift": "Right Click to find valuables",
   "item.nylemod.speedy_block.tooltip": "Step on block to get §3SPEED§r effect",
 
-  "tooltip.nylemod.mythril_mod": "§dA Magical Block"
+  "tooltip.nylemod.mythril_mod": "§dA Magical Block",
+
+  "nylemod.dowsing_rod_found_ore": "Found Ore Sound",
+  "nylemod.mythril_lamp_break": "Mythril Lamp break Sound",
+  "nylemod.mythril_lamp_step": "Mythril Lamp step Sound",
+  "nylemod.mythril_lamp_place": "Mythril Lamp place Sound",
+  "nylemod.mythril_lamp_hit": "Mythril Lamp hit Sound",
+  "nylemod.mythril_lamp_fall": "Mythril Lamp fall Sound"
 }

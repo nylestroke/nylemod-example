@@ -1,12 +1,11 @@
 package me.nylestroke.nylemod.item;
 
 import me.nylestroke.nylemod.NylemodExample;
+import me.nylestroke.nylemod.block.ModBlocks;
 import me.nylestroke.nylemod.item.custom.*;
+import me.nylestroke.nylemod.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.block.FlowerBlock;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -69,6 +68,23 @@ public class ModItems {
 
     public static final Item MAGIC_MYTHRIL_DUST = registerItem("magic_mythril_dust",
             new Item(new FabricItemSettings().group(ModItemGroup.NYLEMOD)));
+
+    public static final Item DATA_TABLET = registerItem("data_tablet",
+            new DataTabletItem(new FabricItemSettings().group(ModItemGroup.NYLEMOD).maxCount(1)));
+
+    public static final Item GRAPE_SEEDS = registerItem("grape_seeds",
+            new AliasedBlockItem(ModBlocks.GRAPE_VINE, new FabricItemSettings().group(ModItemGroup.NYLEMOD)));
+
+    public static final Item VLADIKBOW = registerItem("vladikbow",
+            new BowItem(new FabricItemSettings().group(ModItemGroup.NYLEMOD).maxCount(1).maxDamage(520)));
+
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+            new ModMusicDiscItem(7, ModSounds.BAR_BRAWL,new FabricItemSettings()
+                    .group(ModItemGroup.NYLEMOD).maxCount(1)));
+
+    public static final Item HARD_BASS_MUSIC_DISC = registerItem("hard_bass_music_disc",
+            new ModMusicDiscItem(7, ModSounds.HARD_BASS,new FabricItemSettings()
+                    .group(ModItemGroup.NYLEMOD).maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {

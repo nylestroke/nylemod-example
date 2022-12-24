@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "clicked=false": { "model": "nylemod:block/mythril_lamp_off" },
+    "clicked=true": { "model": "nylemod:block/mythril_lamp_on" }
+  }
+}

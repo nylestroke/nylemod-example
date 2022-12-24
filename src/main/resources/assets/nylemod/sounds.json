@@ -1,0 +1,54 @@
+{
+  "dowsing_rod_found_ore": {
+    "subtitle": "nylemod.dowsing_rod_found_ore",
+    "sounds": [
+      "nylemod:dowsing_rod_found_ore"
+    ]
+  },
+  "mythril_lamp_break": {
+    "subtitle": "nylemod.mythril_lamp_break",
+    "sounds": [
+      "nylemod:mythril_lamp_break"
+    ]
+  },
+  "mythril_lamp_step": {
+    "subtitle": "nylemod.mythril_lamp_step",
+    "sounds": [
+      "nylemod:mythril_lamp_step"
+    ]
+  },
+  "mythril_lamp_place": {
+    "subtitle": "nylemod.mythril_lamp_place",
+    "sounds": [
+      "nylemod:mythril_lamp_place"
+    ]
+  },
+  "mythril_lamp_hit": {
+    "subtitle": "nylemod.mythril_lamp_hit",
+    "sounds": [
+      "nylemod:mythril_lamp_hit"
+    ]
+  },
+  "mythril_lamp_fall": {
+    "subtitle": "nylemod.mythril_lamp_fall",
+    "sounds": [
+      "nylemod:mythril_lamp_fall"
+    ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "nylemod:bar_brawl",
+        "stream": true
+      }
+    ]
+  },
+  "hard_bass": {
+    "sounds": [
+      {
+        "name": "nylemod:hard_bass",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "nylemod:item/vladikbow",
+  "textures": {
+    "layer0": "nylemod:item/vladikbow_pulling_0"
+  }
+}

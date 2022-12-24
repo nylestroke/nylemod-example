@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#",
+    "X"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:glass"
+    },
+    "#": {
+      "item": "minecraft:spruce_sapling"
+    }
+  },
+  "result": {
+    "item": "nylemod:winter_window",
+    "count": 2
+  }
+}

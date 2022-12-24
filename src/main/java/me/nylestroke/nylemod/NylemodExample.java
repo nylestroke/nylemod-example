@@ -2,6 +2,7 @@ package me.nylestroke.nylemod;
 
 import me.nylestroke.nylemod.block.ModBlocks;
 import me.nylestroke.nylemod.item.ModItems;
+import me.nylestroke.nylemod.painting.ModPaintings;
 import me.nylestroke.nylemod.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -17,6 +18,7 @@ public class NylemodExample implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModRegistries.registerModStuffs();
+        ModPaintings.registerPaintings();
 
     }
 }

@@ -4,6 +4,7 @@
   "package": "me.nylestroke.nylemod.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ModEntityDataSaver"
   ],
   "client": [
     "NylemodMixin"

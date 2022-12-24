@@ -3,6 +3,7 @@ package me.nylestroke.nylemod.block;
 import me.nylestroke.nylemod.NylemodExample;
 import me.nylestroke.nylemod.block.custom.*;
 import me.nylestroke.nylemod.item.ModItemGroup;
+import me.nylestroke.nylemod.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
@@ -84,6 +85,18 @@ public class ModBlocks {
 
     public static final Block POTTED_LILAC_FLOWER = registerBlockWithoutBlockItem("potted_lilac_flower",
             new FlowerPotBlock(ModBlocks.LILAC_FLOWER, FabricBlockSettings.copy(Blocks.POTTED_ALLIUM).nonOpaque()));
+
+    public static final Block MYTHRIL_LAMP = registerBlock("mythril_lamp",
+            new MythrilLampBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(4.0f).requiresTool()
+                    .luminance((state) -> state.get(MythrilLampBlock.CLICKED) ? 15 : 0)
+                    .sounds(ModSounds.MYTHRIL_SOUNDS)), ModItemGroup.NYLEMOD);
+
+    public static final Block WINTER_WINDOW = registerBlock("winter_window",
+            new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).strength(3.0f).nonOpaque()), ModItemGroup.NYLEMOD);
+
+    public static final Block GRAPE_VINE = registerBlockWithoutBlockItem("grape_vine",
+            new GrapeVineBlock(FabricBlockSettings.copy(Blocks.WHEAT).nonOpaque()));
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
         registerBlockItem(name, block, group, tooltipKey);
