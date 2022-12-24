@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "nylemod:mythril_ore",
+    "nylemod:netherrack_mythril_ore",
+    "nylemod:deepslate_mythril_ore",
     "minecraft:redstone_ore",
     "minecraft:diamond_ore",
     "minecraft:iron_ore",

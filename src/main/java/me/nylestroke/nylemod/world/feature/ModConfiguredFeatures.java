@@ -37,6 +37,18 @@ public class ModConfiguredFeatures {
                     ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.LILAC_FLOWER)))));
 
+    public static final List<OreFeatureConfig.Target> OVERWORLD_MYTHRIL_ORES = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
+                    ModBlocks.MYTHRIL_ORE.getDefaultState()),
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES,
+                    ModBlocks.DEEPSLATE_MYTHRIL_ORE.getDefaultState()),
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.NETHERRACK,
+                    ModBlocks.NETHERRACK_MYTHRIL_ORE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> MYTHRIL_ORE =
+            ConfiguredFeatures.register("mythril_ore", Feature.ORE,
+                    new OreFeatureConfig(OVERWORLD_MYTHRIL_ORES, 9));
+
     public static void registerConfiguredFeatures() {
         System.out.println("Registering ModConfiguredFeatures for " + NylemodExample.MOD_ID);
     }

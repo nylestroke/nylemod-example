@@ -3,8 +3,10 @@ package me.nylestroke.nylemod.world.gen;
 public class ModWorldGen {
 
     public static void generateModWorldGen() {
-        ModTreeGeneration.generateTrees();
+        ModOreGeneration.generateOres();
+
         ModFlowerGeneration.generateFlowers();
+        ModTreeGeneration.generateTrees();
     }
 
 }

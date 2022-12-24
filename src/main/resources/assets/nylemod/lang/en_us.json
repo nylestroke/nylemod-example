@@ -61,6 +61,7 @@
   "item.nylemod.speedy_block.tooltip": "Step on block to get §3SPEED§r effect",
 
   "tooltip.nylemod.mythril_mod": "§dA Magical Block",
+  "effect.nylemod.freeze": "Freeze",
 
   "nylemod.dowsing_rod_found_ore": "Found Ore Sound",
   "nylemod.mythril_lamp_break": "Mythril Lamp break Sound",
