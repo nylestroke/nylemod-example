@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X",
+    "#X"
+  ],
+  "key": {
+    "#": {
+      "item": "nylemod:mythril_ingot"
+    },
+    "X": {
+      "item": "nylemod:jacaranda_log"
+    }
+  },
+  "result": {
+    "item": "nylemod:mythril_blaster"
+  }
+}

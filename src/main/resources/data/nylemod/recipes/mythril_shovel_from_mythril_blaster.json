@@ -1,0 +1,14 @@
+{
+  "type": "nylemod:mythril_blaster",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_shovel"
+    },
+    {
+      "item": "nylemod:mythril_ingot"
+    }
+  ],
+  "output": {
+    "item": "nylemod:mythril_shovel"
+  }
+}
