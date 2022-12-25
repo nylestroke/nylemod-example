@@ -3,8 +3,8 @@ package me.nylestroke.nylemod.util;
 import me.nylestroke.nylemod.NylemodExample;
 import me.nylestroke.nylemod.block.ModBlocks;
 import me.nylestroke.nylemod.command.FreezeCommand;
-import me.nylestroke.nylemod.command.ReturnHomeCommand;
-import me.nylestroke.nylemod.command.SetHomeCommand;
+import me.nylestroke.nylemod.command.RandomTPCommand;
+import me.nylestroke.nylemod.command.HomeCommand;
 import me.nylestroke.nylemod.event.ModPlayerEventCopyFrom;
 import me.nylestroke.nylemod.item.ModItems;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
@@ -37,10 +37,9 @@ public class ModRegistries {
     }
 
     private static void registerCommands() {
-        CommandRegistrationCallback.EVENT.register(SetHomeCommand::register);
-        CommandRegistrationCallback.EVENT.register(ReturnHomeCommand::register);
-        CommandRegistrationCallback.EVENT.register(FreezeCommand::freezeCommand);
-        CommandRegistrationCallback.EVENT.register(FreezeCommand::unfreezeCommand);
+        CommandRegistrationCallback.EVENT.register(HomeCommand::register);
+        CommandRegistrationCallback.EVENT.register(FreezeCommand::register);
+        CommandRegistrationCallback.EVENT.register(RandomTPCommand::register);
     }
 
     private static void registerEvents() {
