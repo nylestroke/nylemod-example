@@ -23,6 +23,7 @@
   "item.nylemod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
   "item.nylemod.hard_bass_music_disc": "Hard Bass Music Disc",
   "item.nylemod.hard_bass_music_disc.desc": "Hard Bass School - Raz-raz-raz, eto hardbass (YT)",
+  "item.nylemod.mythril_staff": "Mythril Staff",
 
   "block.nylemod.mythril_block": "Mythril Block",
   "block.nylemod.mythril_ore": "Mythril Ore",
@@ -51,6 +52,7 @@
   "block.nylemod.jacaranda_planks": "Jacaranda Planks",
   "block.nylemod.jacaranda_leaves": "Jacaranda Leaves",
   "block.nylemod.jacaranda_sapling": "Jacaranda Sapling",
+  "block.nylemod.mythril_blaster": "Mythril Blaster",
 
   "itemGroup.nylemod.nylemod_tab": "NyleMod",
 
@@ -68,5 +70,9 @@
   "nylemod.mythril_lamp_step": "Mythril Lamp step Sound",
   "nylemod.mythril_lamp_place": "Mythril Lamp place Sound",
   "nylemod.mythril_lamp_hit": "Mythril Lamp hit Sound",
-  "nylemod.mythril_lamp_fall": "Mythril Lamp fall Sound"
+  "nylemod.mythril_lamp_fall": "Mythril Lamp fall Sound",
+
+  "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
+  "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze"
 }

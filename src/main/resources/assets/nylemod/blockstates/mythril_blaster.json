@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "nylemod:block/mythril_blaster" },
+    "facing=east": { "model": "nylemod:block/mythril_blaster", "y": 90 },
+    "facing=south": { "model": "nylemod:block/mythril_blaster", "y": 180 },
+    "facing=west": { "model": "nylemod:block/mythril_blaster", "y": 270 }
+  }
+}

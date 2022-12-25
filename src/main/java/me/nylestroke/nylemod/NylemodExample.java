@@ -1,9 +1,11 @@
 package me.nylestroke.nylemod;
 
 import me.nylestroke.nylemod.block.ModBlocks;
+import me.nylestroke.nylemod.block.entity.ModBlockEntities;
 import me.nylestroke.nylemod.effect.ModEffects;
 import me.nylestroke.nylemod.item.ModItems;
 import me.nylestroke.nylemod.painting.ModPaintings;
+import me.nylestroke.nylemod.potion.ModPotions;
 import me.nylestroke.nylemod.util.ModLootTableModifiers;
 import me.nylestroke.nylemod.util.ModRegistries;
 import me.nylestroke.nylemod.world.feature.ModConfiguredFeatures;
@@ -31,6 +33,10 @@ public class NylemodExample implements ModInitializer {
         ModLootTableModifiers.modifyLootTables();
 
         ModEffects.registerEffects();
+
+        ModPotions.registerPotions();
+
+        ModBlockEntities.registerAllBlockEntities();
 
     }
 }

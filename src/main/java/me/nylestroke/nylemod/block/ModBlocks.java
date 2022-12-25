@@ -17,6 +17,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -30,16 +31,19 @@ public class ModBlocks {
             ModItemGroup.NYLEMOD, "tooltip.nylemod.mythril_mod");
 
     public static final Block MYTHRIL_ORE = registerBlock("mythril_ore",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool()), ModItemGroup.NYLEMOD);
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool(),
+                    UniformIntProvider.create(2, 6)), ModItemGroup.NYLEMOD);
 
     public static final Block RAW_MYTHRIL_BLOCK = registerBlock("raw_mythril_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.NYLEMOD);
 
     public static final Block NETHERRACK_MYTHRIL_ORE = registerBlock("netherrack_mythril_ore",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroup.NYLEMOD);
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool(),
+                    UniformIntProvider.create(2, 6)), ModItemGroup.NYLEMOD);
 
     public static final Block DEEPSLATE_MYTHRIL_ORE = registerBlock("deepslate_mythril_ore",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroup.NYLEMOD);
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4.5f).requiresTool(),
+                    UniformIntProvider.create(2, 6)), ModItemGroup.NYLEMOD);
 
     public static final Block SPEEDY_BLOCK = registerBlock("speedy_block",
             new SpeedyBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroup.NYLEMOD);
@@ -126,6 +130,10 @@ public class ModBlocks {
     public static final Block JACARANDA_SAPLING = registerBlock("jacaranda_sapling",
             new SaplingBlock(new JacarandaSaplingGenerator(),
                     FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroup.NYLEMOD);
+
+    public static final Block MYTHRIL_BLASTER = registerBlock("mythril_blaster",
+            new MythrilBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()), ModItemGroup.NYLEMOD);
+
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
         registerBlockItem(name, block, group, tooltipKey);

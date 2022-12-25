@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "nylemod:mythril_ingot"
+    },
+    "title": "Magic Ingot",
+    "description": "The Power lies in the Mythril!",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "nylemod:textures/block/mythril_block.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nylemod:mythril_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
