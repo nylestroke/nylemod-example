@@ -1,8 +1,11 @@
 package me.nylestroke.nylemod.util;
 
+import me.nylestroke.nylemod.enchantment.ModEnchantments;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import me.nylestroke.nylemod.item.ModItems;
+import net.minecraft.item.EnchantedBookItem;
+import net.minecraft.item.Items;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;

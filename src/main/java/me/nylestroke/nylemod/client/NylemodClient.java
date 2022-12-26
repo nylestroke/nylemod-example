@@ -1,11 +1,17 @@
 package me.nylestroke.nylemod.client;
 
 import me.nylestroke.nylemod.block.ModBlocks;
+import me.nylestroke.nylemod.fluid.ModFluids;
+import me.nylestroke.nylemod.particle.ModParticles;
+import me.nylestroke.nylemod.particle.custom.CitrineParticle;
 import me.nylestroke.nylemod.screen.ModScreenHandlers;
 import me.nylestroke.nylemod.screen.MythrilBlasterScreen;
 import me.nylestroke.nylemod.util.ModModelPredicateProvider;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.minecraft.client.render.RenderLayer;
 
@@ -31,5 +37,15 @@ public class NylemodClient implements ClientModInitializer {
         ModModelPredicateProvider.registerModModels();
 
         ScreenRegistry.register(ModScreenHandlers.MYTHRIL_BLASTER_SCREEN_HANDLER, MythrilBlasterScreen::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.CITRINE_PARTICLE, CitrineParticle.Factory::new);
+
+        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.HONEY_STILL,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xe9860c));
+        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.HONEY_FLOWING,
+                new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
+                        SimpleFluidRenderHandler.WATER_FLOWING,
+                        SimpleFluidRenderHandler.WATER_OVERLAY, 0xe9860c));
     }
 }

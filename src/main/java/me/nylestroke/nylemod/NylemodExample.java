@@ -3,8 +3,10 @@ package me.nylestroke.nylemod;
 import me.nylestroke.nylemod.block.ModBlocks;
 import me.nylestroke.nylemod.block.entity.ModBlockEntities;
 import me.nylestroke.nylemod.effect.ModEffects;
+import me.nylestroke.nylemod.enchantment.ModEnchantments;
 import me.nylestroke.nylemod.item.ModItems;
 import me.nylestroke.nylemod.painting.ModPaintings;
+import me.nylestroke.nylemod.particle.ModParticles;
 import me.nylestroke.nylemod.potion.ModPotions;
 import me.nylestroke.nylemod.recipe.ModRecipes;
 import me.nylestroke.nylemod.screen.ModScreenHandlers;
@@ -41,6 +43,9 @@ public class NylemodExample implements ModInitializer {
 
         ModRecipes.registerRecipes();
         ModScreenHandlers.registerAllScreenHandlers();
+
+        ModParticles.registerParticles();
+        ModEnchantments.registerModEnchantments();
 
     }
 }

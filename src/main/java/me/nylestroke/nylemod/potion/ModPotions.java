@@ -3,7 +3,7 @@ package me.nylestroke.nylemod.potion;
 import me.nylestroke.nylemod.NylemodExample;
 import me.nylestroke.nylemod.effect.ModEffects;
 import me.nylestroke.nylemod.item.ModItems;
-//import me.nylestroke.nylemod.mixin.BrewingRecipeRegistryMixin;
+import me.nylestroke.nylemod.mixin.BrewingRecipeRegistryMixin;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
@@ -26,8 +26,8 @@ public class ModPotions {
     }
 
     private static void registerPotionRecipes() {
-    //        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, ModItems.MYTHRIL_INGOT,
-    //                ModPotions.FREEZE_POTION);
+        BrewingRecipeRegistryMixin.invokeRegisterPotionRecipe(Potions.AWKWARD, ModItems.MYTHRIL_INGOT,
+                ModPotions.FREEZE_POTION);
     }
 
 }

@@ -1,6 +1,7 @@
 package me.nylestroke.nylemod.item.custom;
 
 import me.nylestroke.nylemod.item.ModItems;
+import me.nylestroke.nylemod.particle.ModParticles;
 import me.nylestroke.nylemod.sound.ModSounds;
 import me.nylestroke.nylemod.util.InventoryUtil;
 import me.nylestroke.nylemod.util.ModTags;
@@ -49,6 +50,8 @@ public class DowsingRodItem extends Item {
                         addNbtToDataTable(player, positionClicked.add(0, -i, 0), blockBelow);
                     }
 
+                    spawnFoundParticles(context, positionClicked);
+
                     context.getWorld().playSound(player, positionClicked, ModSounds.DOWSING_ROD_FOUND_ORE,
                             SoundCategory.BLOCKS, 1f, 1f);
 
@@ -65,6 +68,16 @@ public class DowsingRodItem extends Item {
                 (player -> player.sendToolBreakStatus(player.getActiveHand())));
 
         return super.useOnBlock(context);
+    }
+
+    private void spawnFoundParticles(ItemUsageContext pContext, BlockPos positionClicked) {
+        for (int i = 0; i < 360; i++) {
+            if ((i & 20) == 0) {
+                pContext.getWorld().addParticle(ModParticles.CITRINE_PARTICLE,
+                        positionClicked.getX() + 0.5d, positionClicked.getY() + 1, positionClicked.getZ() + 0.5d,
+                        Math.cos(i) * 0.25d, 0.15d, Math.sin(i) * 0.25d);
+            }
+        }
     }
 
     private void addNbtToDataTable(PlayerEntity player, BlockPos pos, Block blockBelow) {

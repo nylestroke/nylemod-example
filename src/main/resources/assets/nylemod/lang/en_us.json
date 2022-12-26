@@ -24,6 +24,7 @@
   "item.nylemod.hard_bass_music_disc": "Hard Bass Music Disc",
   "item.nylemod.hard_bass_music_disc.desc": "Hard Bass School - Raz-raz-raz, eto hardbass (YT)",
   "item.nylemod.mythril_staff": "Mythril Staff",
+  "item.nylemod.honey_bucket": "Honey Bucket",
 
   "block.nylemod.mythril_block": "Mythril Block",
   "block.nylemod.mythril_ore": "Mythril Ore",
@@ -53,6 +54,7 @@
   "block.nylemod.jacaranda_leaves": "Jacaranda Leaves",
   "block.nylemod.jacaranda_sapling": "Jacaranda Sapling",
   "block.nylemod.mythril_blaster": "Mythril Blaster",
+  "block.nylemod.jacaranda_sign": "Jacaranda Sign",
 
   "itemGroup.nylemod.nylemod_tab": "NyleMod",
 
@@ -74,5 +76,7 @@
 
   "item.minecraft.potion.effect.freeze_potion": "Freeze Potion",
   "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
-  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze"
+  "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
+
+  "enchantment.nylemod.lighting_striker": "Lighting Striker"
 }

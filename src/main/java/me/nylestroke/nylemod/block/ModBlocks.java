@@ -2,6 +2,8 @@ package me.nylestroke.nylemod.block;
 
 import me.nylestroke.nylemod.NylemodExample;
 import me.nylestroke.nylemod.block.custom.*;
+import me.nylestroke.nylemod.block.entity.ModSignTypes;
+import me.nylestroke.nylemod.fluid.ModFluids;
 import me.nylestroke.nylemod.item.ModItemGroup;
 import me.nylestroke.nylemod.sound.ModSounds;
 import me.nylestroke.nylemod.world.feature.tree.JacarandaSaplingGenerator;
@@ -133,6 +135,16 @@ public class ModBlocks {
 
     public static final Block MYTHRIL_BLASTER = registerBlock("mythril_blaster",
             new MythrilBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()), ModItemGroup.NYLEMOD);
+
+    public static final Block JACARANDA_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("jacaranda_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.JACARANDA));
+
+    public static final Block JACARANDA_SIGN_BLOCK = registerBlockWithoutBlockItem("jacaranda_sign",
+            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.JACARANDA));
+
+    public static final Block HONEY_FLUID_BLOCK = registerBlockWithoutBlockItem("honey_fluid_block",
+            new ModFluidBlock(ModFluids.HONEY_STILL, FabricBlockSettings.of(Material.WATER)
+                    .noCollision().nonOpaque().dropsNothing()));
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {

@@ -2,6 +2,7 @@ package me.nylestroke.nylemod.item;
 
 import me.nylestroke.nylemod.NylemodExample;
 import me.nylestroke.nylemod.block.ModBlocks;
+import me.nylestroke.nylemod.fluid.ModFluids;
 import me.nylestroke.nylemod.item.custom.*;
 import me.nylestroke.nylemod.sound.ModSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -89,6 +90,12 @@ public class ModItems {
     public static final Item MYTHRIL_STAFF = registerItem("mythril_staff",
             new MythrilStaffItem(new FabricItemSettings().group(ModItemGroup.NYLEMOD).maxCount(1)));
 
+    public static final Item JACARANDA_SIGN = registerItem("jacaranda_sign",
+            new SignItem(new FabricItemSettings().group(ModItemGroup.NYLEMOD).maxCount(16),
+                    ModBlocks.JACARANDA_SIGN_BLOCK, ModBlocks.JACARANDA_WALL_SIGN_BLOCK));
+
+    public static final Item HONEY_BUCKET = registerItem("honey_bucket",
+            new BucketItem(ModFluids.HONEY_STILL, new FabricItemSettings().group(ModItemGroup.NYLEMOD).maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {
