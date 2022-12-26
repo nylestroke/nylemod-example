@@ -2,6 +2,8 @@ package me.nylestroke.nylemod.world.feature;
 
 import me.nylestroke.nylemod.NylemodExample;
 import me.nylestroke.nylemod.block.ModBlocks;
+import net.minecraft.block.Blocks;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.feature.*;
@@ -20,7 +22,8 @@ public class ModConfiguredFeatures {
                     new StraightTrunkPlacer(5, 6, 3),
                     BlockStateProvider.of(ModBlocks.JACARANDA_LEAVES),
                     new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 4),
-                    new TwoLayersFeatureSize(1, 0, 2)).build());
+                    new TwoLayersFeatureSize(1, 0, 2))
+                    .dirtProvider(BlockStateProvider.of(ModBlocks.MYTHRIL_BLOCK)).build());
 
 
     public static final RegistryEntry<PlacedFeature> JACARANDA_CHECKED =
@@ -48,6 +51,22 @@ public class ModConfiguredFeatures {
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> MYTHRIL_ORE =
             ConfiguredFeatures.register("mythril_ore", Feature.ORE,
                     new OreFeatureConfig(OVERWORLD_MYTHRIL_ORES, 9));
+
+    public static final List<OreFeatureConfig.Target> NETHER_MYTHRIL_ORES = List.of(
+            OreFeatureConfig.createTarget(OreConfiguredFeatures.BASE_STONE_NETHER,
+                    ModBlocks.NETHERRACK_MYTHRIL_ORE.getDefaultState()));
+
+    public static final List<OreFeatureConfig.Target> END_MYTHRIL_ORES = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE),
+                    ModBlocks.END_MYTHRIL_ORE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> NETHER_MYTHRIL_ORE =
+            ConfiguredFeatures.register("nether_mythril_ore",Feature.ORE,
+                    new OreFeatureConfig(NETHER_MYTHRIL_ORES, 12));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> END_MYTHRIL_ORE =
+            ConfiguredFeatures.register("end_mythril_ore",Feature.ORE,
+                    new OreFeatureConfig(END_MYTHRIL_ORES, 12));
 
     public static void registerConfiguredFeatures() {
         System.out.println("Registering ModConfiguredFeatures for " + NylemodExample.MOD_ID);

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "nylemod:block/end_mythril_ore"
+  }
+}

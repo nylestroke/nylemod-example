@@ -5,10 +5,14 @@ import me.nylestroke.nylemod.block.ModBlocks;
 import me.nylestroke.nylemod.command.FreezeCommand;
 import me.nylestroke.nylemod.command.RandomTPCommand;
 import me.nylestroke.nylemod.command.HomeCommand;
+import me.nylestroke.nylemod.entity.ModEntities;
+import me.nylestroke.nylemod.entity.custom.RaccoonEntity;
 import me.nylestroke.nylemod.event.ModPlayerEventCopyFrom;
 import me.nylestroke.nylemod.item.ModItems;
+import me.nylestroke.nylemod.villager.ModVillagers;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -27,6 +31,8 @@ public class ModRegistries {
         registerFlammableBlock();
         registerStrippables();
         registerCustomTrades();
+        registerAttributes();
+        registerVillagers();
     }
 
     private static void registerFuels() {
@@ -79,6 +85,46 @@ public class ModRegistries {
                             new ItemStack(Items.EMERALD, 6),
                             new ItemStack(ModItems.MYTHRIL_PICKAXE, 1),
                             12, 7, 0.08f));
+                });
+
+    }
+
+    private static void registerAttributes() {
+        FabricDefaultAttributeRegistry.register(ModEntities.RACCOON, RaccoonEntity.setAttributes());
+    }
+
+    private static void registerVillagers() {
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.BLAST_MASTER,1,
+                factories -> {
+                    factories.add((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 6),
+                            new ItemStack(ModItems.MYTHRIL_PICKAXE, 1),
+                            12,7,0.08f));
+                    factories.add((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 12),
+                            new ItemStack(ModItems.MYTHRIL_BOOTS, 1),
+                            12,7,0.08f));
+                    factories.add((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 26),
+                            new ItemStack(ModItems.MYTHRIL_CHESTPLATE, 1),
+                            12,7,0.08f));
+                });
+
+        TradeOfferHelper.registerVillagerOffers(ModVillagers.BLAST_MASTER,2,
+                factories -> {
+                    factories.add((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 64),
+                            new ItemStack(ModItems.MYTHRIL_HOE, 1),
+                            12,7,0.08f));
+                    factories.add((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 5),
+                            new ItemStack(ModItems.MYTHRIL_INGOT, 1),
+                            12,7,0.08f));
+                    factories.add((entity, random) -> new TradeOffer(
+                            new ItemStack(Items.EMERALD, 50),
+                            new ItemStack(ModItems.VLADIKBOW, 1),
+                            12,7,0.08f));
                 });
 
     }

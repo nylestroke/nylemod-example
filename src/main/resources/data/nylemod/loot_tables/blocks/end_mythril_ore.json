@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "nylemod:netherrack_mythril_ore"
+          "name": "nylemod:end_mythril_ore"
         }
       ],
       "conditions": [

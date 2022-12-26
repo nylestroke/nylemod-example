@@ -130,8 +130,8 @@ public class ModBlocks {
                     .requiresTool()), ModItemGroup.NYLEMOD);
 
     public static final Block JACARANDA_SAPLING = registerBlock("jacaranda_sapling",
-            new SaplingBlock(new JacarandaSaplingGenerator(),
-                    FabricBlockSettings.copy(Blocks.OAK_SAPLING)), ModItemGroup.NYLEMOD);
+            new ModSaplingBlock(new JacarandaSaplingGenerator(),
+                    FabricBlockSettings.copy(Blocks.OAK_SAPLING), () -> ModBlocks.MYTHRIL_BLOCK), ModItemGroup.NYLEMOD);
 
     public static final Block MYTHRIL_BLASTER = registerBlock("mythril_blaster",
             new MythrilBlasterBlock(FabricBlockSettings.of(Material.METAL).nonOpaque()), ModItemGroup.NYLEMOD);
@@ -145,6 +145,9 @@ public class ModBlocks {
     public static final Block HONEY_FLUID_BLOCK = registerBlockWithoutBlockItem("honey_fluid_block",
             new ModFluidBlock(ModFluids.HONEY_STILL, FabricBlockSettings.of(Material.WATER)
                     .noCollision().nonOpaque().dropsNothing()));
+
+    public static final Block END_MYTHRIL_ORE = registerBlock("end_mythril_ore",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroup.NYLEMOD);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {

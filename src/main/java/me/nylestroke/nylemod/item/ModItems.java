@@ -2,6 +2,7 @@ package me.nylestroke.nylemod.item;
 
 import me.nylestroke.nylemod.NylemodExample;
 import me.nylestroke.nylemod.block.ModBlocks;
+import me.nylestroke.nylemod.entity.ModEntities;
 import me.nylestroke.nylemod.fluid.ModFluids;
 import me.nylestroke.nylemod.item.custom.*;
 import me.nylestroke.nylemod.sound.ModSounds;
@@ -96,6 +97,10 @@ public class ModItems {
 
     public static final Item HONEY_BUCKET = registerItem("honey_bucket",
             new BucketItem(ModFluids.HONEY_STILL, new FabricItemSettings().group(ModItemGroup.NYLEMOD).maxCount(1)));
+
+    public static final Item RACCOON_SPAWN_EGG = registerItem("raccoon_spawn_egg",
+            new SpawnEggItem(ModEntities.RACCOON, 0x948e8d, 0x3b3635,
+                    new FabricItemSettings().group(ModItemGroup.NYLEMOD).maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {

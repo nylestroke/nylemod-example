@@ -26,6 +26,8 @@
   "item.nylemod.mythril_staff": "Mythril Staff",
   "item.nylemod.honey_bucket": "Honey Bucket",
 
+  "item.nylemod.raccoon_spawn_egg": "Raccoon Spawn Egg",
+
   "block.nylemod.mythril_block": "Mythril Block",
   "block.nylemod.mythril_ore": "Mythril Ore",
   "block.nylemod.raw_mythril_block": "Raw Mythril Block",
@@ -55,6 +57,7 @@
   "block.nylemod.jacaranda_sapling": "Jacaranda Sapling",
   "block.nylemod.mythril_blaster": "Mythril Blaster",
   "block.nylemod.jacaranda_sign": "Jacaranda Sign",
+  "block.nylemod.end_mythril_ore": "End Mythril Ore",
 
   "itemGroup.nylemod.nylemod_tab": "NyleMod",
 
@@ -78,5 +81,7 @@
   "item.minecraft.splash_potion.effect.freeze_potion": "Splash Potion of Freeze",
   "item.minecraft.lingering_potion.effect.freeze_potion": "Lingering Potion of Freeze",
 
-  "enchantment.nylemod.lighting_striker": "Lighting Striker"
+  "enchantment.nylemod.lighting_striker": "Lighting Striker",
+
+  "entity.minecraft.villager.blastmaster": "Blastmaster"
 }

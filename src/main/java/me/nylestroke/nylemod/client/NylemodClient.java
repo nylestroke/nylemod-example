@@ -1,6 +1,8 @@
 package me.nylestroke.nylemod.client;
 
 import me.nylestroke.nylemod.block.ModBlocks;
+import me.nylestroke.nylemod.entity.ModEntities;
+import me.nylestroke.nylemod.entity.client.RaccoonRenderer;
 import me.nylestroke.nylemod.fluid.ModFluids;
 import me.nylestroke.nylemod.particle.ModParticles;
 import me.nylestroke.nylemod.particle.custom.CitrineParticle;
@@ -12,6 +14,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.minecraft.client.render.RenderLayer;
 
@@ -47,5 +50,7 @@ public class NylemodClient implements ClientModInitializer {
                 new SimpleFluidRenderHandler(SimpleFluidRenderHandler.WATER_STILL,
                         SimpleFluidRenderHandler.WATER_FLOWING,
                         SimpleFluidRenderHandler.WATER_OVERLAY, 0xe9860c));
+
+        EntityRendererRegistry.register(ModEntities.RACCOON, RaccoonRenderer::new);
     }
 }
