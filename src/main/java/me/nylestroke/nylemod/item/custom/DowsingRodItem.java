@@ -6,6 +6,7 @@ import me.nylestroke.nylemod.sound.ModSounds;
 import me.nylestroke.nylemod.util.InventoryUtil;
 import me.nylestroke.nylemod.util.ModTags;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -40,14 +41,14 @@ public class DowsingRodItem extends Item {
             boolean foundBlock = false;
 
             for (int i = 0; i <= positionClicked.getY() + 64; i++) {
-                Block blockBelow = context.getWorld().getBlockState(positionClicked.down(i)).getBlock();
+                BlockState blockBelow = context.getWorld().getBlockState(positionClicked.down(i));
 
                 if (isValuableBlock(blockBelow)) {
-                    outputValuableCoordinates(positionClicked.down(i), player, blockBelow);
+                    outputValuableCoordinates(positionClicked.down(i), player, blockBelow.getBlock());
                     foundBlock = true;
 
                     if (InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET)) {
-                        addNbtToDataTable(player, positionClicked.add(0, -i, 0), blockBelow);
+                        addNbtToDataTable(player, positionClicked.add(0, -i, 0), blockBelow.getBlock());
                     }
 
                     spawnFoundParticles(context, positionClicked);
@@ -105,8 +106,7 @@ public class DowsingRodItem extends Item {
                 "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"), false);
     }
 
-    private boolean isValuableBlock(Block block) {
-        return Registry.BLOCK.getOrCreateEntry(Registry.BLOCK.getKey(block).get())
-                .isIn(ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS);
+    private boolean isValuableBlock(BlockState state) {
+        return state.isIn(ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS);
     }
 }
