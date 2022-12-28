@@ -13,12 +13,14 @@ import me.nylestroke.nylemod.screen.ModScreenHandlers;
 import me.nylestroke.nylemod.util.ModLootTableModifiers;
 import me.nylestroke.nylemod.util.ModRegistries;
 import me.nylestroke.nylemod.villager.ModVillagers;
+import me.nylestroke.nylemod.world.dimension.ModDimensions;
 import me.nylestroke.nylemod.world.feature.ModConfiguredFeatures;
 import me.nylestroke.nylemod.world.gen.ModWorldGen;
 import me.nylestroke.nylemod.world.structure.ModStructures;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.bernie.geckolib3.GeckoLib;
 
 public class NylemodExample implements ModInitializer {
     public static final String MOD_ID = "nylemod";
@@ -49,9 +51,12 @@ public class NylemodExample implements ModInitializer {
         ModParticles.registerParticles();
         ModEnchantments.registerModEnchantments();
 
-        ModVillagers.setupPOIs();
+        GeckoLib.initialize();
 
+        ModVillagers.setupPOIs();
         ModStructures.registerStructureFeatures();
+
+        ModDimensions.registerDimensions();
 
     }
 }

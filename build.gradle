@@ -12,6 +12,7 @@ group = project.maven_group
 
 repositories {
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    maven { url 'https://maven.kyrptonaught.dev' }
 }
 
 dependencies {
@@ -28,6 +29,9 @@ dependencies {
 
     // modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
     modImplementation 'software.bernie.geckolib:geckolib-fabric-1.18:3.0.35'
+
+    modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta52-1.18'
+    include 'net.kyrptonaught:customportalapi:0.0.1-beta52-1.18'
 }
 
 processResources {
