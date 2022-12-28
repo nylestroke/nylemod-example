@@ -102,6 +102,13 @@ public class ModItems {
             new SpawnEggItem(ModEntities.RACCOON, 0x948e8d, 0x3b3635,
                     new FabricItemSettings().group(ModItemGroup.NYLEMOD).maxCount(1)));
 
+    public static final Item LAGUNA_STAFF = registerItem("laguna_staff",
+            new LagunaStaffItem(new FabricItemSettings().group(ModItemGroup.NYLEMOD).maxCount(1)));
+
+    public static final Item GOLDEN_STAND_ITEM = registerItem("golden_stand",
+            new GoldenStandItem(ModBlocks.GOLDEN_STAND,
+                    new FabricItemSettings().group(ModItemGroup.NYLEMOD).maxCount(4)));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(NylemodExample.MOD_ID, name), item);

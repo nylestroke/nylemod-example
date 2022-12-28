@@ -1,9 +1,13 @@
 package me.nylestroke.nylemod.client;
 
 import me.nylestroke.nylemod.block.ModBlocks;
+import me.nylestroke.nylemod.block.entity.ModBlockEntities;
 import me.nylestroke.nylemod.entity.ModEntities;
 import me.nylestroke.nylemod.entity.client.RaccoonRenderer;
 import me.nylestroke.nylemod.entity.client.armor.MythrilArmorRenderer;
+import me.nylestroke.nylemod.entity.client.block.GoldenStandRenderer;
+import me.nylestroke.nylemod.entity.client.item.GoldenStandItemRenderer;
+import me.nylestroke.nylemod.entity.client.item.LagunaStaffRenderer;
 import me.nylestroke.nylemod.fluid.ModFluids;
 import me.nylestroke.nylemod.item.ModItems;
 import me.nylestroke.nylemod.particle.ModParticles;
@@ -16,10 +20,12 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.minecraft.client.render.RenderLayer;
 import software.bernie.geckolib3.renderers.geo.GeoArmorRenderer;
+import software.bernie.geckolib3.renderers.geo.GeoItemRenderer;
 
 public class NylemodClient implements ClientModInitializer {
 
@@ -58,5 +64,11 @@ public class NylemodClient implements ClientModInitializer {
 
         GeoArmorRenderer.registerArmorRenderer(new MythrilArmorRenderer(), ModItems.MYTHRIL_BOOTS,
                 ModItems.MYTHRIL_LEGGINGS, ModItems.MYTHRIL_CHESTPLATE, ModItems.MYTHRIL_HELMET);
+
+        GeoItemRenderer.registerItemRenderer(ModItems.LAGUNA_STAFF, new LagunaStaffRenderer());
+
+
+        GeoItemRenderer.registerItemRenderer(ModItems.GOLDEN_STAND_ITEM, new GoldenStandItemRenderer());
+        BlockEntityRendererRegistry.register(ModBlockEntities.GOLDEN_STAND_ENTITY, GoldenStandRenderer::new);
     }
 }

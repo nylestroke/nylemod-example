@@ -149,6 +149,9 @@ public class ModBlocks {
     public static final Block END_MYTHRIL_ORE = registerBlock("end_mythril_ore",
             new Block(FabricBlockSettings.of(Material.STONE).strength(4.0f).requiresTool()), ModItemGroup.NYLEMOD);
 
+    public static final Block GOLDEN_STAND = registerBlockWithoutBlockItem("golden_stand",
+            new GoldenStandBlock(FabricBlockSettings.of(Material.METAL).strength(6.0f).nonOpaque()));
+
 
     private static Block registerBlock(String name, Block block, ItemGroup group, String tooltipKey) {
         registerBlockItem(name, block, group, tooltipKey);
