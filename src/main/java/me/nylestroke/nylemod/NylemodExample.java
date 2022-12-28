@@ -15,6 +15,7 @@ import me.nylestroke.nylemod.util.ModRegistries;
 import me.nylestroke.nylemod.villager.ModVillagers;
 import me.nylestroke.nylemod.world.feature.ModConfiguredFeatures;
 import me.nylestroke.nylemod.world.gen.ModWorldGen;
+import me.nylestroke.nylemod.world.structure.ModStructures;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -49,6 +50,8 @@ public class NylemodExample implements ModInitializer {
         ModEnchantments.registerModEnchantments();
 
         ModVillagers.setupPOIs();
+
+        ModStructures.registerStructureFeatures();
 
     }
 }
