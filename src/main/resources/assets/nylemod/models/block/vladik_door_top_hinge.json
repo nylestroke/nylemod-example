@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_rh",
-  "textures": {
-    "top": "nylemod:block/vladik_door_top",
-    "bottom": "nylemod:block/vladik_door_bottom"
-  }
-}

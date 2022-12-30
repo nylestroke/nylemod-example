@@ -1,6 +1,7 @@
 plugins {
     id 'fabric-loom' version '1.0-SNAPSHOT'
     id 'maven-publish'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.0'
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -13,6 +14,7 @@ group = project.maven_group
 repositories {
     maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
     maven { url 'https://maven.kyrptonaught.dev' }
+    mavenCentral()
 }
 
 dependencies {
@@ -28,10 +30,13 @@ dependencies {
     // These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.
 
     // modImplementation "net.fabricmc.fabric-api:fabric-api-deprecated:${project.fabric_version}"
-    modImplementation 'software.bernie.geckolib:geckolib-fabric-1.18:3.0.35'
+    modImplementation 'software.bernie.geckolib:geckolib-fabric-1.19:3.1.5'
 
-    modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta52-1.18'
-    include 'net.kyrptonaught:customportalapi:0.0.1-beta52-1.18'
+    modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta59-1.19'
+    include 'net.kyrptonaught:customportalapi:0.0.1-beta59-1.19'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    modImplementation "net.fabricmc:fabric-language-kotlin:1.9.0+kotlin.1.8.0"
 }
 
 processResources {
@@ -74,5 +79,15 @@ publishing {
         // Notice: This block does NOT have the same function as the block in the top level.
         // The repositories here will be used for publishing your artifact, not for
         // retrieving dependencies.
+    }
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }

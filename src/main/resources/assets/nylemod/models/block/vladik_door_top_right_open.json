@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right_open",
+  "textures": {
+    "bottom": "nylemod:block/vladik_door_bottom",
+    "top": "nylemod:block/vladik_door_top"
+  }
+}

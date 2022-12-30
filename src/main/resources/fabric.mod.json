@@ -3,7 +3,7 @@
   "id": "nylemod",
   "version": "${version}",
   "name": "nylemod",
-  "description": "Example mod using Fabric 1.18.2",
+  "description": "Example mod using Fabric 1.19",
   "authors": [
     "nylestroke"
   ],
@@ -15,10 +15,16 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "me.nylestroke.nylemod.client.NylemodClient"
+      {
+        "adapter": "kotlin",
+        "value": "me.nylestroke.nylemod.client.NylemodClient"
+      }
     ],
     "main": [
-      "me.nylestroke.nylemod.NylemodExample"
+      {
+        "adapter": "kotlin",
+        "value": "me.nylestroke.nylemod.NylemodExample"
+      }
     ]
   },
   "mixins": [
@@ -27,6 +33,11 @@
   "depends": {
     "fabricloader": ">=0.14.12",
     "fabric": "*",
-    "minecraft": "1.18.2"
+    "minecraft": "~1.19",
+    "java": ">=17",
+    "fabric-language-kotlin": ">=1.9.0+kotlin.1.8.0"
+  },
+  "suggests": {
+    "another-mod": "*"
   }
 }

@@ -7,8 +7,7 @@
     "BlockEntityTypeMixin",
     "BrewingRecipeRegistryMixin",
     "ModEntityDataSaver",
-    "SignTypeAccessor",
-    "StructureFeatureAccessor"
+    "SignTypeAccessor"
   ],
   "client": [
     "NylemodMixin"
